@@ -1,0 +1,16 @@
+{
+  "name": "min",
+  "version": "1.0.0",
+  "description": "",
+  "main": "fs.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node fs.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "h2190697689"
+  },
+  "author": "min",
+  "license": "ISC"
+}
