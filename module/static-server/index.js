@@ -13,7 +13,7 @@ const server=http.createServer((req,res)=>{
     		console.log(err);
     		data=fs.readFileSync("./public/index.html")
     	}
-    	res.write(data);
+    	res.write(data.toString());
     	res.end();
     })
 })
