@@ -10,6 +10,14 @@ const fs=require("fs");
 // 	console.log(stat.isFile());   // isFile(),  isDirectory(),  
 // })
 
+// 判断给定路径是否存在   (已废弃)
+// fs.exists("./read/china.js",function(exists){
+// 	console.log(exists);
+// })
+
+// 阻塞判断
+// fs.existsSync("./read/china.js");
+
 // 打开文件
 // fs.open("./read/china.js","r+",function(err,fd){
 // 	if(err) throw err;
@@ -32,7 +40,10 @@ const fs=require("fs");
 // fs.readdir("./read",function(err,files){
 // 	if(err) throw err;
 // 	files.forEach(function(file){
-// 		console.log(file);
+// 		fs.readFile(file,(err,data)=>{
+// 			console.log(data)
+// 		})
+// 		// console.log(file);
 // 	})
 // })
 
@@ -103,3 +114,11 @@ const fs=require("fs");
 // 解压
 // const zlib=require("zlib");
 // fs.createReadStream("./read/input.txt.gz").pipe(zlib.createGunzip()).pipe(fs.createWriteStream("./read/input-out.txt"))
+
+// 监听文件
+fs.watchFile("./read/china.js",function(curr,prev){
+
+})
+
+// 解除监听
+fs.unwatchFile("./read/china.js",function(){})
